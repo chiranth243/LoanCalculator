@@ -6,8 +6,7 @@ import LoanCalculateInputMain from '../LoanCalculateInput/LoanCalculateInputMain
 import AmortizationTable from '../AmortizationTable/AmortizationTable';
 import CurrencySelector from '../CurrencySelector/CurrencySelector';
 
-function Home() {
-  const [darkMode, setDarkMode] = useState(false);
+function Home({darkMode, setDarkMode}) {
   const [loanInput, setLoanInput] = useState({
     loanAmount: 100000,
     interestRate: 8.5,

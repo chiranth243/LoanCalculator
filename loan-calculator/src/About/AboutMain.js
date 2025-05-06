@@ -5,10 +5,10 @@ import InstructionsForCandidates from './InstructionsForCandidates';
 import PurposeOfApp from './PurposeOfApp';
 import EmiFormula from './EmiFormula';
 
-function AboutMain() {
+function AboutMain(darkMode, setDarkMode) {
   return (
     <div>
-      <HeaderComponent />
+      <HeaderComponent darkMode={darkMode} setDarkMode={setDarkMode} />
       <About />
       <InstructionsForCandidates />
       <EmiFormula />
