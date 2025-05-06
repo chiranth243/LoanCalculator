@@ -1,0 +1,49 @@
+.instructions-wrapper{
+    width: 100%;
+}
+.instructions-container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 24px;
+    background-color: white;
+}
+
+.instructions-container li{
+    padding: 0;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.icon {
+    font-size: 32px;
+    color: #2e7d32;
+    margin-right: 12px;
+}
+
+.subtitle {
+    margin-bottom: 16px;
+    color: #333;
+    font-size: 16px;
+    text-align: left;
+}
+
+.footer {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.check-icon {
+    color: green;
+    margin-right: 10px;
+    margin-top: 5px;
+}
+
+.footer-text {
+    font-size: 15px;
+    color: black !important;
+}

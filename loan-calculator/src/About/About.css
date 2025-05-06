@@ -1,0 +1,28 @@
+.about-outer-container{
+    width: 100%;
+}
+
+.about-container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 40px;
+    background-color: white;
+    padding-top: 52px;
+    padding-bottom: 0;
+  }
+  
+  .about-title {
+    font-size: 34px;
+    color: black;
+    margin-bottom: 20px;
+    text-align: left;
+    font-weight: 400;
+  }
+  
+  .about-description {
+    font-size: 1.1rem;
+    color: black;
+    line-height: 1.6;
+    text-align: justify;
+  }
+  

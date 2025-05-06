@@ -1,0 +1,13 @@
+.exchange-container {
+    padding: 2rem;
+    text-align: center;
+}
+
+.error-message {
+    color: #d32f2f;
+    background-color: #ffebee;
+    padding: 1rem;
+    margin-top: 1rem;
+    border-radius: 8px;
+    display: inline-block;
+}

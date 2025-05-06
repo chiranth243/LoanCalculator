@@ -1,0 +1,45 @@
+.emi-wrapper {
+    width: 100%;
+}
+
+.emi-container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 24px;
+    background-color: white;
+    padding-top: 0 !important;
+}
+
+.emi-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.emi-icon {
+    font-size: 32px;
+    color: #1565c0;
+    margin-right: 12px;
+}
+
+.emi-description {
+    font-size: 16px;
+    margin-bottom: 12px;
+    color: black;
+    text-align: left;
+}
+
+.emi-equation {
+    font-size: 18px;
+    font-family: 'Courier New', Courier, monospace;
+    padding: 10px;
+    border-radius: 6px;
+    margin-bottom: 16px;
+    text-align: left;
+}
+
+.emi-where {
+    font-weight: 500;
+    margin-bottom: 8px;
+    text-align: left;
+}
