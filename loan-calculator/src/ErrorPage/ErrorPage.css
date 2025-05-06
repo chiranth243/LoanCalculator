@@ -1,0 +1,40 @@
+.error-container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #fafbfd;
+    text-align: center;
+    padding: 20px;
+    padding-top: 0 !important;
+  }
+  
+  .error-code {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: #333;
+  }
+  
+  .error-text {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 10px;
+    color: #222;
+  }
+  
+  .error-subtext {
+    color: #666;
+    margin-bottom: 20px;
+    font-size: 1rem;
+  }
+  
+  .error-img {
+    max-width: 400px;
+    margin-top: 30px;
+  }
+  
+  .back-button {
+    text-decoration: none;
+    font-weight: bold;
+  }

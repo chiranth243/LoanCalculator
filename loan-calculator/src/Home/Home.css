@@ -13,7 +13,6 @@
 
 .emi-result {
   display: flex;
-  /* align-items: center; */
   justify-content: flex-start;
   flex-direction: column;
   padding-left: 28px !important;

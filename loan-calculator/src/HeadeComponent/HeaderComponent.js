@@ -15,15 +15,21 @@ import {
 } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import { useTheme } from '@mui/material/styles';
+import { Link, useLocation } from 'react-router-dom'; // Import useLocation
 import './HeaderComponent.css';
 
-const navItems = ['HOME', 'EXCHANGE RATES (LIVE)', 'ABOUT', 'ERROR PAGE'];
+const navItems = [
+    { label: 'HOME', path: '/' },
+    { label: 'EXCHANGE RATES (LIVE)', path: '/exchange-rates' },
+    { label: 'ABOUT', path: '/about' },
+    { label: 'ERROR PAGE', path: '/error' },
+];
 
-export default function HeaderComponent({darkMode, setDarkMode}) {
+export default function HeaderComponent({ darkMode, setDarkMode }) {
     const [drawerOpen, setDrawerOpen] = useState(false);
-    const [activeTab, setActiveTab] = useState('HOME');
     const theme = useTheme();
     const isMobile = useMediaQuery(theme.breakpoints.down('md'));
+    const location = useLocation(); // Get the current route
 
     const handleDrawerToggle = () => {
         setDrawerOpen(!drawerOpen);
@@ -33,36 +39,28 @@ export default function HeaderComponent({darkMode, setDarkMode}) {
         setDarkMode(!darkMode);
     };
 
-    const handleTabClick = (tab) => {
-        setActiveTab(tab);
-    };
-
     const drawer = (
-        <Box className={`drawer-content ${darkMode ? 'drawer-dark' : 'drawer-light'}`} onClick={handleDrawerToggle}>
+        <Box
+            className={`drawer-content ${darkMode ? 'drawer-dark' : 'drawer-light'}`}
+            onClick={handleDrawerToggle}
+        >
             <List>
                 {navItems.map((item) => (
-                    <ListItem
-                    button
-                    key={item}
-                    onClick={() => handleTabClick(item)}
-                >
-                    <ListItemText
-                        primary={item}
-                        className={`drawer-link ${activeTab === item ? 'active' : ''}`}
-                    />
-                </ListItem>
-                
-
+                    <ListItem button key={item.label}>
+                        <Link
+                            to={item.path}
+                            className={`drawer-link ${location.pathname === item.path ? 'active' : ''}`}
+                        >
+                            <ListItemText primary={item.label} />
+                        </Link>
+                    </ListItem>
                 ))}
             </List>
         </Box>
     );
 
-    
-
     return (
         <AppBar className={`appbar ${darkMode ? 'header-dark' : 'header-light'}`}>
-
             <Toolbar className="toolbar">
                 {isMobile && (
                     <IconButton edge="start" color="inherit" onClick={handleDrawerToggle}>
@@ -70,16 +68,17 @@ export default function HeaderComponent({darkMode, setDarkMode}) {
                     </IconButton>
                 )}
                 <Typography className="logo">Loan Calculator</Typography>
-                <div className='nav-container'>
+                <div className="nav-container">
                     {!isMobile && (
                         <div className="nav-items">
                             {navItems.map((item) => (
                                 <Button
-                                    key={item}
-                                    onClick={() => handleTabClick(item)}
-                                    className={`nav-button ${activeTab === item ? 'active' : ''}`}
+                                    key={item.label}
+                                    className={`nav-button ${location.pathname === item.path ? 'active' : ''}`}
                                 >
-                                    {item}
+                                    <Link to={item.path} className="nav-link">
+                                        {item.label}
+                                    </Link>
                                 </Button>
                             ))}
                         </div>
@@ -92,7 +91,12 @@ export default function HeaderComponent({darkMode, setDarkMode}) {
                 </div>
             </Toolbar>
 
-            <Drawer anchor="left" open={drawerOpen} onClose={handleDrawerToggle} ModalProps={{ keepMounted: true }}>
+            <Drawer
+                anchor="left"
+                open={drawerOpen}
+                onClose={handleDrawerToggle}
+                ModalProps={{ keepMounted: true }}
+            >
                 {drawer}
             </Drawer>
         </AppBar>

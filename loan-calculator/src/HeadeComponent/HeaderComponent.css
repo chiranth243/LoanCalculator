@@ -37,6 +37,16 @@
     transition: background-color 0.3s;
 }
 
+.nav-link, .drawer-link {
+    text-decoration: none; 
+    color: inherit; 
+}
+
+/* .nav-link.active, .drawer-link.active {
+    font-weight: bold; 
+    color: #1976d2;
+} */
+
 .nav-button:hover {
     background-color: rgba(255, 255, 255, 0.1);
 }
