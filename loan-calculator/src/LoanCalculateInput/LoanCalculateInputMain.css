@@ -1,0 +1,129 @@
+.loan-calculate-input-main {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+    height: 100vh;
+    padding: 24px !important;
+    padding-top: 14px !important;
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.loan-calculate-input-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 55%;
+    height: auto;
+    padding-left: 38px;
+}
+
+.loan-calculate-input-main__title {
+    font-size: 33px;
+    text-align: left;
+    font-weight: 400;
+    color: inherit;
+    margin-bottom: 16px;
+    text-wrap: nowrap;
+}
+
+.loan-calculate-input-outer-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between; 
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.loan-calculate-input-outer-container .MuiTextField-root {
+    flex: 1;
+    min-width: 30%;
+}
+
+.loan-calculate-input-outer-container .MuiTextField-root {
+    flex: 1;
+    min-width: 30%;
+}
+
+.loan-calculate-button-container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.loan-calculate-input-main.dark {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+.loan-calculate-input-main.dark .MuiOutlinedInput-root {
+    /* background-color: #1e1e1e; */
+    color: #ffffff;
+}
+
+.loan-calculate-input-main.dark .MuiInputLabel-root {
+    color: #bbbbbb;
+}
+
+.loan-calculate-input-main.dark .MuiOutlinedInput-notchedOutline {
+    border-color: #444;
+}
+
+.loan-calculate-input-main.dark .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+    border-color: #90caf9;
+}
+
+.loan-calculate-input-main.dark .MuiInputBase-input {
+    color: #ffffff;
+}
+
+.loan-calculate-input-main.dark .MuiButton-containedPrimary {
+    background-color: #90caf9;
+    color: #000000;
+  }
+  
+  .loan-calculate-input-main.dark .MuiButton-containedPrimary:hover {
+    background-color: #64b5f6;
+  }
+  
+
+/* Spinner Removal */
+.no-spinner::-webkit-outer-spin-button,
+.no-spinner::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.no-spinner[type=number] {
+    -moz-appearance: textfield;
+}
+
+@media (max-width: 768px) {
+
+    .loan-calculate-input-column{
+        width: 75%;
+    }
+
+    .loan-calculate-input-column{
+        padding-left: 10px;
+    }
+
+    .loan-calculate-input-outer-container .MuiTextField-root {
+        width: calc(50% - 8px);
+    }
+
+    .loan-calculate-input-outer-container .MuiTextField-root:last-child {
+        width: 50%;
+    }
+}
+
+@media (max-width: 468px) {
+    .loan-calculate-input-main {
+        padding-left: 10px !important;
+    }
+    .loan-calculate-input-main__title{
+        font-size: 26px;
+    }
+}

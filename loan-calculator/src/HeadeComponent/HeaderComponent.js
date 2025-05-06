@@ -37,10 +37,8 @@ export default function HeaderComponent({darkMode, setDarkMode}) {
         setActiveTab(tab);
     };
 
-    const themeClass = darkMode ? 'dark-theme' : 'light-theme';
-
     const drawer = (
-        <Box className={`drawer-content ${themeClass}`} onClick={handleDrawerToggle}>
+        <Box className={`drawer-content ${darkMode ? 'drawer-dark' : 'drawer-light'}`} onClick={handleDrawerToggle}>
             <List>
                 {navItems.map((item) => (
                     <ListItem
@@ -63,7 +61,8 @@ export default function HeaderComponent({darkMode, setDarkMode}) {
     
 
     return (
-        <AppBar position="static" className={`appbar ${themeClass}`}>
+        <AppBar className={`appbar ${darkMode ? 'header-dark' : 'header-light'}`}>
+
             <Toolbar className="toolbar">
                 {isMobile && (
                     <IconButton edge="start" color="inherit" onClick={handleDrawerToggle}>

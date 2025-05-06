@@ -1,16 +1,7 @@
-.home-outside{
-    background-color: white !important;
-    height: 100vh;
-    color: black;
+.home-container {
+  height: 100vh;
+  width: 100%;
+  padding-top: 62px;
+  transition: background-color 0.3s ease;
+  background-color: white;
 }
-
-.home-outside.dark-theme {
-    background-color: black !important;
-    color: white;
-  }
-  
-  .home-outside.light-theme {
-    background-color: white !important;
-    color: black;
-  }
-  
