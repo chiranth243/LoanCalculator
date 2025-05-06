@@ -6,9 +6,16 @@ import Button from '@mui/material/Button';
 function CurrencySelector({ emi, selectedCurrency, setSelectedCurrency, exchangeRates, darkMode, handleResetTable }) {
     const currencyList = Object.keys(exchangeRates);
 
+    // Convert EMI to the selected currency
+    const convertedEmi = selectedCurrency && exchangeRates[selectedCurrency]
+        ? (emi * exchangeRates[selectedCurrency]).toFixed(2)
+        : emi;
+
     return (
         <div className={`currency-selector-container ${darkMode ? 'dark-mode' : ''}`}>
-            <h3 className='emi-header'>Monthly EMI: ${emi} USD</h3>
+            <h3 className='emi-header'>
+                Monthly EMI: {convertedEmi} {selectedCurrency}
+            </h3>
             <div className={`currency-selector-row ${darkMode ? 'dark-mode' : ''}`}>
                 <Autocomplete
                     value={selectedCurrency || null}
