@@ -5,9 +5,13 @@
     padding-top: 0 !important;
 }
 .table-outer-container {
-    /* padding: 20px; */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     width: 94%;
+}
+.Amorization-table-header{
+    background-color: white;
+    width: 100%;
+    height: auto;
 }
 
 .table-heading{
@@ -15,10 +19,11 @@
     text-align: left;
     font-weight: 400;
     color: black;
-    margin-bottom: 25px;
+    padding-bottom: 25px;
     padding-top: 16px;
     padding-left: 20px;
     margin-top: 0 !important;
+    margin-bottom: 0 !important;
 }
 
 .table-container {
@@ -62,4 +67,34 @@
     z-index: 1;
     border-bottom: 1px solid #ddd; 
     padding: 18px;
+}
+
+/* Dark Theme Wrapper */
+.amortization-table-container.dark-theme {
+    background-color: #121212;
+    color: #ffffff;
+}
+.dark-theme .Amorization-table-header {
+    background-color: #1c1b1b;
+}
+
+.dark-theme .table-heading {
+    color: #ffffff;
+}
+
+.dark-theme .amortization-table th {
+    background-color: black;
+    color: #ffffff;
+    border-bottom: 1px solid #444;
+}
+
+.dark-theme .amortization-table td {
+    background-color: #1c1b1b;
+    color: #ffffff;
+    border-color: #333;
+}
+
+/* Optional: Add hover effect for rows */
+.dark-theme .amortization-table tr:hover td {
+    background-color: #292929;
 }

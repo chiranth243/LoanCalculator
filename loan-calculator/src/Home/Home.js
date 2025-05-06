@@ -67,7 +67,7 @@ function Home() {
   return (
     <div className="home-container">
       <HeaderComponent darkMode={darkMode} setDarkMode={setDarkMode} />
-      <div className="home-content">
+      <div className={`home-content ${darkMode ? 'dark-mode' : ''}`}>
         <LoanCalculateInputMain
           loanInput={loanInput}
           setLoanInput={setLoanInput}

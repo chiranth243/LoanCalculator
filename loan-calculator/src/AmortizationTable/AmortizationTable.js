@@ -1,16 +1,18 @@
 import React from 'react';
 import './AmortizationTable.css';
 
-function AmortizationTable({ schedule, selectedCurrency, exchangeRates }) {
+function AmortizationTable({ schedule, selectedCurrency, darkMode, exchangeRates }) {
     const convertValue = (value) => {
         const rate = exchangeRates[selectedCurrency] || 1; // Default to 1 if no rate is found
         return (value * rate).toFixed(2);
     };
 
     return (
-        <div className="amortization-table-container">
+        <div className={`amortization-table-container ${darkMode ? 'dark-theme' : ''}`}>
             <div className="table-outer-container">
-                <h3 className="table-heading">Amortization Schedule ({selectedCurrency})</h3>
+                <div className='Amorization-table-header'>
+                    <h3 className="table-heading">Amortization Schedule ({selectedCurrency})</h3>
+                </div>
                 <div className="table-container">
                     <table className="amortization-table">
                         <thead>
