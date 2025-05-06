@@ -6,6 +6,11 @@
   background-color: white;
 }
 
+.home-content{
+  height: auto;
+  min-height: 100vh;
+}
+
 .emi-result {
   display: flex;
   /* align-items: center; */
