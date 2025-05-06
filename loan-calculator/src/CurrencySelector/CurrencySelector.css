@@ -1,0 +1,116 @@
+.currency-selector-container {
+    display: flex;
+    align-items: flex-start !important;
+    justify-content: flex-start !important;
+    width: 100%;
+    flex-direction: column;
+    padding: 24px !important;
+    padding-left: 38px !important;
+    padding-top: 0 !important;
+}
+
+.currency-selector-container.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+/* Dark mode for Autocomplete input */
+.currency-selector-row.dark-mode .MuiAutocomplete-root,
+.currency-selector-row.dark-mode .MuiInputBase-root {
+    background-color: #1e1e1e !important;
+    color: #ffffff;
+    border-radius: 4px;
+}
+
+.currency-selector-row.dark-mode .MuiOutlinedInput-notchedOutline {
+    border-color: #444;
+}
+
+.currency-selector-row.dark-mode .Mui-focused .MuiOutlinedInput-notchedOutline {
+    border-color: #bb86fc !important;
+}
+
+.currency-selector-row.dark-mode .MuiInputLabel-root {
+    color: #bbbbbb;
+}
+
+.currency-selector-row.dark-mode .Mui-focused .MuiInputLabel-root {
+    color: #bb86fc;
+}
+
+
+.emi-header{
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.emi-header.dark-mode {
+    color: #ffffff;
+}
+
+.currency-selector-row {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 93%;
+    flex-direction: row;
+    gap: 16px;
+}
+
+.currency-selector-row.dark-mode .MuiAutocomplete-root {
+    background-color: #1e1e1e;
+    border-color: #444;
+    color: #ffffff;
+}
+
+.currency-selector-row .MuiAutocomplete-root {
+    flex-grow: 0; 
+    width: 95px; 
+}
+
+.MuiTextField-root {
+    width: 100%;
+}
+
+.MuiAutocomplete-inputRoot:hover {
+    border-color: #6200ea;
+}
+
+.loan-reset-button-container {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+
+.loan-reset-button-container .MuiButton-root {
+    color: #9c27b0;
+    border: 1px solid #de7def;
+    background-color: transparent;
+    text-transform: uppercase;
+    padding: 8px 16px;
+    border-radius: 4px; 
+    transition: all 0.3s ease;
+}
+
+.loan-reset-button-container .MuiButton-root:hover {
+    background-color: #f3e5f5; 
+    border-color: #7b1fa2; 
+    color: #7b1fa2; 
+}
+
+.loan-reset-button-container.dark-mode .MuiButton-root {
+    color: #bb86fc;
+    border-color: #bb86fc;
+}
+
+.loan-reset-button-container.dark-mode .MuiButton-root:hover {
+    background-color: #3700b3;
+    border-color: #bb86fc;
+    color: #ffffff;
+}
+
+@media (max-width: 768px) {
+    .MuiAutocomplete-hasPopupIcon.MuiAutocomplete-hasClearIcon.css-fd2qku-MuiAutocomplete-root .MuiOutlinedInput-root{
+        padding-right: 0 !important;
+    }
+}

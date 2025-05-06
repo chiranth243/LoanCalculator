@@ -1,0 +1,65 @@
+.amortization-table-container{
+    padding: 28px !important;
+    padding-bottom: 0 !important;
+    width: 100%;
+    padding-top: 0 !important;
+}
+.table-outer-container {
+    /* padding: 20px; */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 94%;
+}
+
+.table-heading{
+    font-size: 22px;
+    text-align: left;
+    font-weight: 400;
+    color: black;
+    margin-bottom: 25px;
+    padding-top: 16px;
+    padding-left: 20px;
+    margin-top: 0 !important;
+}
+
+.table-container {
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.amortization-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.amortization-table td {
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    padding: 8px;
+    text-align: right;
+    font-size: 14.5px;
+    padding: 18px;
+}
+
+.amortization-table td:first-child,
+.amortization-table th:first-child {
+    border-left: none;
+    padding-left: 20px;
+    text-align: left;
+}
+
+.amortization-table td:last-child,
+.amortization-table th:last-child {
+    border-right: none;
+}
+
+.amortization-table th {
+    position: sticky;
+    top: 0;
+    font-size: 14px;
+    font-weight: 400;
+    background-color: white;
+    text-align: right;
+    z-index: 1;
+    border-bottom: 1px solid #ddd; 
+    padding: 18px;
+}

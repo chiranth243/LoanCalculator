@@ -5,3 +5,27 @@
   transition: background-color 0.3s ease;
   background-color: white;
 }
+
+.emi-result {
+  display: flex;
+  /* align-items: center; */
+  justify-content: flex-start;
+  flex-direction: column;
+  padding-left: 28px !important;
+  padding-top: 0 !important;
+}
+
+.emi-result.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+@media (max-width: 768px) {
+  .emi-result {
+    padding-left: 0 !important;
+  }
+
+  .home-container {
+    padding-top: 50px;
+  }
+}
